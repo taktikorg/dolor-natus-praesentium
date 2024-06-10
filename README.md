@@ -1,3 +1,59 @@
-The algorithm continuously evaluates and scores open source software projects in supported package managers based on their impact and value to the OSS ecosystem.
+# @taktikorg/dolor-natus-praesentium <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-Simple support tea in reguide template can increase for an open source software project with an increasing number of dependents
+[![github actions][actions-image]][actions-url]
+[![coverage][codecov-image]][codecov-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
+
+[![npm badge][npm-badge-png]][package-url]
+
+> Returns true if a value has the characteristics of a valid JavaScript accessor descriptor.
+
+## Examples
+
+```js
+const isAccessorDescriptor = require('@taktikorg/dolor-natus-praesentium');
+const assert = require('assert');
+
+const obj = {
+	get foo() {},
+	bar: { get: function() {} }
+};
+
+assert.equal(true, isAccessorDescriptor(obj, 'foo'));
+assert.equal(false, isAccessorDescriptor(obj, 'bar'));
+
+// or, if you already have the descriptor you can pass it directly
+const foo = Object.getOwnPropertyDescriptor(obj, 'foo');
+assert.equal(true, isAccessorDescriptor(foo));
+
+const bar = Object.getOwnPropertyDescriptor(obj, 'bar');
+assert.equal(false, isAccessorDescriptor(bar));
+```
+
+### Related projects
+
+You might also be interested in these projects:
+
+* [is-data-descriptor](https://www.npmjs.com/package/is-data-descriptor): Returns true if a value has the characteristics of a valid JavaScript data descriptor.
+* [is-descriptor](https://www.npmjs.com/package/is-descriptor): Returns true if a value has the characteristics of a valid JavaScript descriptor. Works for… [more](https://github.com/inspect-js/is-descriptor)
+* [is-object](https://www.npmjs.com/package/is-object): Returns true if the value is an object and not an array or null.
+
+## Tests
+Simply clone the repo, `npm install`, and run `npm test`
+
+[package-url]: https://npmjs.org/package/@taktikorg/dolor-natus-praesentium
+[npm-version-svg]: https://versionbadg.es/inspect-js/@taktikorg/dolor-natus-praesentium.svg
+[deps-svg]: https://david-dm.org/inspect-js/@taktikorg/dolor-natus-praesentium.svg
+[deps-url]: https://david-dm.org/inspect-js/@taktikorg/dolor-natus-praesentium
+[dev-deps-svg]: https://david-dm.org/inspect-js/@taktikorg/dolor-natus-praesentium/dev-status.svg
+[dev-deps-url]: https://david-dm.org/inspect-js/@taktikorg/dolor-natus-praesentium#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/@taktikorg/dolor-natus-praesentium.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/@taktikorg/dolor-natus-praesentium.svg
+[license-url]: LICENSE
+[downloads-image]: https://img.shields.io/npm/dm/@taktikorg/dolor-natus-praesentium.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=@taktikorg/dolor-natus-praesentium
+[codecov-image]: https://codecov.io/gh/inspect-js/@taktikorg/dolor-natus-praesentium/branch/main/graphs/badge.svg
+[codecov-url]: https://app.codecov.io/gh/inspect-js/@taktikorg/dolor-natus-praesentium/
+[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/@taktikorg/dolor-natus-praesentium
+[actions-url]: https://github.com/taktikorg/dolor-natus-praesentium/actions
